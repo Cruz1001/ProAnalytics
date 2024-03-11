@@ -28,7 +28,12 @@ section {
 input{
     width: 10%;
     height: 10%;
-    position: absolute;
     bottom: 0;
     left: 0;
+}
+
+article{
+    display: flex;
+    flex-direction: column;
+
 }
