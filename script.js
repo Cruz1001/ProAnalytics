@@ -1,33 +1,33 @@
 const times = {
     'Fluxo':{
-        logo: 'Fluxologo_square.webp'
+        logo: './Imagens/Logos/Fluxologo.webp'
     },
     'FURIA':{
-
+        logo: './Imagens/Logos/FURIAlogo.webp'
     },
     'INTZ':{
-
+        logo: './Imagens/Logos/INTZlogo.webp'
     },
-    'KaBuM! Esports':{
-
+    'kABuM! Esports':{
+        logo: './Imagens/Logos/Kabumlogo.webp'
     },
     'Liberty':{
-        
+        logo: './Imagens/Logos/Libertylogo.webp'
     },
     'Los Grandes':{
-
+        logo: './Imagens/Logos/Los_Grandeslogo.webp'
     },
     'LOUD':{
-
+        logo: './Imagens/Logos/LOUDlogo.webp'
     },
     'paiN Gaming':{
-
+        logo: './Imagens/Logos/PaiN_Gaminglogo.webp'
     },
     'RED Canids':{
-
+        logo: './Imagens/Logos/RED_Canidslogo.webp'
     },
     'Vivo Keyd Stars':{
-
+        logo: './Imagens/Logos/Vivo_Keyd_Starslogo.webp'
     },
 
 };
