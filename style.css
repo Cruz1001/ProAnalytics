@@ -16,13 +16,8 @@ section {
 #Time_2, #Time_1{
     height: 50%;
     width: 100%;
-}
-
-#Time_1{
-    background-color: blue;
-}
-#Time_2{
-    background-color: aqua;
+    background-size: cover;
+    background-position: center; 
 }
 
 input{
