@@ -45,20 +45,22 @@ const times = {
 
 
 var  inputTime1 = window.document.getElementById('txtbtime1');
-var  inputTime2 = window.document.getElementById('txtbtime2');
+var  inputTime2 = window.document.getElementById('txtbtime2'); 
 
-inputTime1.addEventListener('change', () => escolher(inputTime1.value, 'Logo_Time1'));
-inputTime2.addEventListener('change', () => escolher(inputTime2.value, 'Logo_Time2'));
 
-function escolher(nomeTime, infoDivId){
-    const infoDiv = window.document.getElementById(infoDivId);
-    infoDiv.innerHTML = '';
+inputTime1.addEventListener('change', () => escolher(inputTime1.value, 'imgLogo1', 'NomeTime1'));
+inputTime2.addEventListener('change', () => escolher(inputTime2.value, 'imgLogo2', 'NomeTime2'));
+
+function escolher(nomeTime, idImg, idTxt){
+    const img = window.document.getElementById(idImg);
+    const txt = window.document.getElementById(idTxt);
 
     if (times.hasOwnProperty(nomeTime)) {
-        const timeInfo = times[nomeTime];
-        infoDiv.innerHTML = `<h2>${nomeTime}</h2><img src="${timeInfo.logo}" alt="Logo do ${nomeTime}">`;
+        img.src = times[nomeTime].logo;
+        txt.innerHTML = `${nomeTime}`;
     }else{
-        infoDiv.innerHTML = '<p>Time não reconhecido <p>';
+        img.src = './Imagens/Logos/Placeholder_Logo.png';
+        txt.innerHTML = 'Time não encontrado'
     }
 }
 
@@ -73,6 +75,7 @@ function trocarFundo(nomeTime, infoDivId){
         infoDiv.style.backgroundImage = `url('${timeInfo.fundo}')`;
     } else{
         infoDiv.style.backgroundColor = "#FEFEFE";
+        infoDiv.style.backgroundImage = `url('')`;
     }
 }
 

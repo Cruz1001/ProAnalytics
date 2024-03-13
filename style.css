@@ -25,10 +25,53 @@ input{
     height: 10%;
     bottom: 0;
     left: 0;
+    position: absolute;
 }
 
 article{
     display: flex;
     flex-direction: column;
 
+}
+
+.Logos{
+    position: relative;
+    left: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;   
+}
+
+.NomesTimes{
+    justify-content: left;
+}
+
+.teste{
+    border: 2px solid red;
+}
+
+.NomesTimes{
+    margin: 10px;
+}
+
+.Jogadores{
+    height: 50%;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.Jogador{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ConteudoTimes{
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
