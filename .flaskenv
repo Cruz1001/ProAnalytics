@@ -1,2 +1,2 @@
-FLASK_APP=scraping.py
+FLASK_APP=teste.py
 FLASK_ENV=development

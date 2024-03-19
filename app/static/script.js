@@ -3,49 +3,47 @@ console.log("O arquivo script.js está sendo executado.");
 
 const times = {
     'Fluxo':{
-        logo: './Imagens/Logos/Fluxologo.webp',
-        fundo: './Imagens/Fundos/backgroundBrancoRoxo.png'
+        logo: 'static/Imagens/Logos/Fluxologo.webp',
+        fundo: 'static/Imagens/Fundos/backgroundBrancoRoxo.png'
     },
     'FURIA':{
-        logo: './Imagens/Logos/FURIAlogo.webp',
-        fundo: './Imagens/Fundos/backgroundBrancoPreto.png'
+        logo: 'static/Imagens/Logos/FURIAlogo.webp',
+        fundo: 'static/Imagens/Fundos/backgroundBrancoPreto.png'
     },
     'INTZ':{
-        logo: './Imagens/Logos/INTZlogo.webp',
-        fundo: './Imagens/Fundos/backgroundBrancoPreto.png'
+        logo: 'static/Imagens/Logos/INTZlogo.webp',
+        fundo: 'static/Imagens/Fundos/backgroundBrancoPreto.png'
     },
     'kABuM! Esports':{
-        logo: './Imagens/Logos/Kabumlogo.webp',
-        fundo: './Imagens/Fundos/backgroundLaranjaPreto.png'
+        logo: 'static/Imagens/Logos/Kabumlogo.webp',
+        fundo: 'static/Imagens/Fundos/backgroundLaranjaPreto.png'
     },
     'Liberty':{
-        logo: './Imagens/Logos/Libertylogo.webp',
-        fundo: './Imagens/Fundos/backgroundCiano.png'
+        logo: 'static/Imagens/Logos/Libertylogo.webp',
+        fundo: 'static/Imagens/Fundos/backgroundCiano.png'
     },
     'Los Grandes':{
-        logo: './Imagens/Logos/Los_Grandeslogo.webp',
-        fundo: './Imagens/Fundos/backgroundLaranjaPreto.png'
+        logo: 'static/Imagens/Logos/Los_Grandeslogo.webp',
+        fundo: 'static/Imagens/Fundos/backgroundLaranjaPreto.png'
     },
     'LOUD':{
-        logo: './Imagens/Logos/LOUDlogo.webp',
-        fundo: './Imagens/Fundos/backgroundVerde.png'
+        logo: 'static/Imagens/Logos/LOUDlogo.webp',
+        fundo: 'static/Imagens/Fundos/backgroundVerde.png'
     },
     'paiN Gaming':{
-        logo: './Imagens/Logos/PaiN_Gaminglogo.webp',
-        fundo: './Imagens/Fundos/backgroundPretoVermelho.png'
+        logo: 'static/Imagens/Logos/PaiN_Gaminglogo.webp',
+        fundo: 'static/Imagens/Fundos/backgroundPretoVermelho.png'
     },
     'RED Canids':{
-        logo: './Imagens/Logos/RED_Canidslogo.webp',
-        fundo: './Imagens/Fundos/backgroundVermelho.png'
+        logo: 'static/Imagens/Logos/RED_Canidslogo.webp',
+        fundo: 'static/Imagens/Fundos/backgroundVermelho.png'
     },
     'Vivo Keyd Stars':{
-        logo: './Imagens/Logos/Vivo_Keyd_Starslogo.webp',
-        fundo: './Imagens/Fundos/backgroundRoxo.png'
+        logo: 'static/Imagens/Logos/Vivo_Keyd_Starslogo.webp',
+        fundo: 'static/Imagens/Fundos/backgroundRoxo.png'
     },
 
 };
-
-
 
 var  inputTime1 = window.document.getElementById('txtbtime1');
 var  inputTime2 = window.document.getElementById('txtbtime2'); 
@@ -63,7 +61,7 @@ function escolher(nomeTime, idImg, idTxt){
         img.src = times[nomeTime].logo;
         txt.innerHTML = `${nomeTime}`;
     }else{
-        img.src = './Imagens/Logos/Placeholder_Logo.png';
+        img.src = 'static/Imagens/Logos/Placeholder_Logo.png';
         txt.innerHTML = 'Time não encontrado'
     }
 }

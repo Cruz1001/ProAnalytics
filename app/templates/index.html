@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Comparador</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-    <script src="{{ url_for('get_js', filename='script.js') }}"></script>
+   
 </head>
 <body>
     <main>
@@ -17,34 +17,34 @@
                 <div class="ConteudoTimes">
                 
 
-                    <div id="Logo_Time1" class="Logos teste">
-                        <h2 id="NomeTime1" class="NomesTimes teste"></h2>
+                    <div id="Logo_Time1" class="Logos">
+                        <h2 id="NomeTime1" class="NomesTimes"></h2>
                         <img src="" alt="" id="imgLogo1" class="imgLogos">
                     </div>
 
                     <div id="Jogadores1" class="Jogadores">
 
                         <div id="Top_Time1" class="Jogador">
-                            <img src="Imagens/Jogadores/PlaceholderJogador.png" alt="" class="Jogador" id="Top1">
-                            <h2 id="NomeTop1" class=""></h2>
+                            <img src="{{ url_for('static', filename='/Imagens/Jogadores/PlaceholderJogador.png') }}" alt="" class="Jogador" id="Top1">
+                            <h2 id="NomeTop1" class="">{{ line[0].nome }}</h2>
                         </div>
                         <div id="Jungle_Time1" class="Jogador">
-                            <img src="Imagens/Jogadores/PlaceholderJogador.png" alt="" class="Jogador" id="Jng1">
-                            <h2 id="NomeJng1"></h2>
+                            <img src="{{ url_for('static', filename='/Imagens/Jogadores/PlaceholderJogador.png') }}" alt="" class="Jogador" id="Jng1">
+                            <h2 id="NomeJng1">{{ line[1].nome }}</h2>
                         </div>
                         <div id="Mid_Time1" class="Jogador">
-                            <img src="Imagens/Jogadores/PlaceholderJogador.png" alt="" class="Jogador" id="Mid1">
-                            <h2 id="NomeMid1"></h2>
+                            <img src="{{ url_for('static', filename='/Imagens/Jogadores/PlaceholderJogador.png') }}" alt="" class="Jogador" id="Mid1">
+                            <h2 id="NomeMid1">{{ line[2].nome }}</h2>
                         </div>
                         <div id="Adc_Time1" class="Jogador">
-                            <img src="Imagens/Jogadores/PlaceholderJogador.png" alt="" class="Jogador" id="Adc1">
-                            <h2 id="NomeAdc1"></h2>
+                            <img src="{{ url_for('static', filename='/Imagens/Jogadores/PlaceholderJogador.png') }}" alt="" class="Jogador" id="Adc1">
+                            <h2 id="NomeAdc1">{{ line[3].nome }}</h2>
                         </div>
                         <div id="Sup_Time1" class="Jogador">
-                            <img src="Imagens/Jogadores/PlaceholderJogador.png" alt="" class="Jogador" id="Sup1">
-                            <h2 id="NomeSup1"></h2>
+                            <img src="{{ url_for('static', filename='/Imagens/Jogadores/PlaceholderJogador.png') }}" alt="" class="Jogador" id="Sup1">
+                            <h2 id="NomeSup1">{{ line[4].nome }}</h2>
                         </div>
-
+                        
                     </div>
                 </div>
 
@@ -82,23 +82,23 @@
 
                     <div id="Jogadores2" class="Jogadores">
                         <div id="Top_Time2" class="Jogador">
-                            <img src="Imagens/Jogadores/PlaceholderJogador.png" alt="" class="Jogador" id="Top2">
+                            <img src="{{ url_for('static', filename='/Imagens/Jogadores/PlaceholderJogador.png') }}" alt="" class="Jogador" id="Top2">
                             <h2 id="NomeTop2" class=""></h2>
                         </div>
                         <div id="Jungle_Time2" class="Jogador">
-                            <img src="Imagens/Jogadores/PlaceholderJogador.png" alt="" class="Jogador" id="Jng2">
+                            <img src="{{ url_for('static', filename='/Imagens/Jogadores/PlaceholderJogador.png') }}" alt="" class="Jogador" id="Jng2">
                             <h2 id="NomeJng2" class=""></h2>
                         </div>
                         <div id="Mid_Time2" class="Jogador">
-                            <img src="Imagens/Jogadores/PlaceholderJogador.png" alt="" class="Jogador" id="Mid2">
+                            <img src="{{ url_for('static', filename='/Imagens/Jogadores/PlaceholderJogador.png') }}" alt="" class="Jogador" id="Mid2">
                             <h2 id="NomeMid2" class=""></h2>
                         </div>
                         <div id="Adc_Time2" class="Jogador">
-                            <img src="Imagens/Jogadores/PlaceholderJogador.png" alt="" class="Jogador" id="Adc2">
+                            <img src="{{ url_for('static', filename='/Imagens/Jogadores/PlaceholderJogador.png') }}" alt="" class="Jogador" id="Adc2">
                             <h2 id="NomeAdc2" class=""></h2>
                         </div>
                         <div id="Sup_Time2" class="Jogador">
-                            <img src="Imagens/Jogadores/PlaceholderJogador.png" alt="" class="Jogador" id="Sup2">
+                            <img src="{{ url_for('static', filename='/Imagens/Jogadores/PlaceholderJogador.png') }}" alt="" class="Jogador" id="Sup2">
                             <h2 id="NomeSup2" class=""></h2>
                         </div>
                     </div>
@@ -119,7 +119,8 @@
                 </datalist>
             </article>
         </section>
+        
     </main>
-    
+    <script src="{{ url_for('get_js', filename='script.js') }}"></script>
 </body>
 </html>
