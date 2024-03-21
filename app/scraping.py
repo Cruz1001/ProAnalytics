@@ -6,10 +6,10 @@ class Jogador:
        def __init__(self, nome, role) :
               self.nome = nome
               self.role = role
-def obter_dados_jogadores():
+def obter_dados_jogadores(nomeTimeUnderscore):
 
         #Pega o site que iremos raspar os dados da Line e deixa acessivel para o código
-        response = requests.get('https://lol.fandom.com/wiki/Vivo_Keyd_Stars')
+        response = requests.get(f'https://lol.fandom.com/wiki/{nomeTimeUnderscore}')
         content = response.content
         site = BeautifulSoup(content, 'html.parser')
 

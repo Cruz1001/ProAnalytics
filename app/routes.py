@@ -1,5 +1,5 @@
 from app import app
-from flask import Flask, send_from_directory, render_template
+from flask import Flask, send_from_directory, render_template, jsonify
 import os
 import sys
 from app.scraping import obter_dados_jogadores
@@ -9,10 +9,18 @@ from app.scraping import obter_dados_jogadores
 @app.route('/index')
 
 def index():
-    line_objs = obter_dados_jogadores()
-    print(line_objs)
-    line = obter_dados_jogadores()
-    return render_template('index.html', line = line)
+    return render_template('index.html')
+
+@app.route('/buscar_time/<nomeTime>')
+def buscar_time(nomeTime):
+    jogadores = obter_dados_jogadores(nomeTime)
+
+    jogadores_serializaveis = []
+    for jogador in jogadores:
+        jogador_dict = {"nome": jogador.nome, "role": jogador.role}
+        jogadores_serializaveis.append(jogador_dict)
+
+    return jsonify({"encontrado": True, "jogadores": jogadores_serializaveis})
 
 @app.route('/get_js/<path:filename>')
 def get_js(filename):
