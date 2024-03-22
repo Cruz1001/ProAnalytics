@@ -7,6 +7,11 @@
     height: 100%;
 }
 
+@font-face {
+    font-family: 'Grafiti';
+    src: url('/static/Fontes/Blank.ttf') format('truetype');
+}
+
 section {
     height: 50%;
     width: 100%;
@@ -43,16 +48,17 @@ article{
 }
 
 .NomesTimes{
-    justify-content: left;
-}
-
-/*.teste{
-    border: 2px solid red;
-} */
-
-.NomesTimes{
+    justify-content: center;
+    height: 40%;
+    font-size: 48px;
+    font-family: 'Grafiti', sans-serif;
+    color: white;
     margin: 10px;
 }
+
+.teste{
+    border: 2px solid red;
+} 
 
 .Jogadores{
     height: 50%;
@@ -67,6 +73,8 @@ article{
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-image: url(Imagens/Jogadores/teste.png);
+    background-size: cover;
 }
 
 .ConteudoTimes{
@@ -74,4 +82,13 @@ article{
     display: flex;
     flex-direction: row;
     align-items: center;
+}
+
+.porcentagem{
+    justify-content: center;
+    height: 40%;
+    font-size: 150px;
+    font-family: 'Grafiti', sans-serif;
+    color: white;
+    margin: 10px;
 }

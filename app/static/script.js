@@ -67,9 +67,11 @@ function escolher(nomeTime, idImg, idTxt, top, jng, mid, adc, sup){
     const adcElement = window.document.getElementById(adc);
     const supElement = window.document.getElementById(sup);
 
+    const nomeExibicao = nomeTime.replace(/_/g, ' ');
+
     if (times.hasOwnProperty(nomeTime)) {
         img.src = times[nomeTime].logo;
-        txt.innerHTML = `${nomeTime}`;
+        txt.innerHTML = `${nomeExibicao}`;
         fetch(`/buscar_time/${nomeTime}`)
             .then(response => response.json())
             .then(data => {
