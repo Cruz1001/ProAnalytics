@@ -40,11 +40,11 @@ article{
 }
 
 .Logos{
-    position: relative;
     left: 0px;
     display: flex;
     flex-direction: column;
-    align-items: center;   
+    align-items: start;
+    margin-left: 1%;
 }
 
 .NomesTimes{
@@ -56,12 +56,20 @@ article{
     margin: 10px;
 }
 
-.teste{
+.NomesJogadores{
+    justify-content: center;
+    color: white;
+    font-family: 'Grafiti', sans-serif;
+    font-size: 48px;
+}
+
+/*.teste{
     border: 2px solid red;
-} 
+} */
 
 .Jogadores{
     height: 50%;
+    width: 8px;
     position: relative;
     display: flex;
     flex-direction: row;
@@ -82,12 +90,14 @@ article{
     display: flex;
     flex-direction: row;
     align-items: center;
+    margin-left: 5%;
 }
 
 .porcentagem{
+    position: relative;
     justify-content: center;
     height: 40%;
-    font-size: 150px;
+    font-size: 72px;
     font-family: 'Grafiti', sans-serif;
     color: white;
     margin: 10px;

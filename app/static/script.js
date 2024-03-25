@@ -55,10 +55,10 @@ inputTime2.addEventListener('change', () => {
     inputTime2.value = inputTime2.value.replace(/\s+/g, '_'); // Substitui espaços por underscores
 });
 
-inputTime1.addEventListener('change', () => escolher(inputTime1.value, 'imgLogo1', 'NomeTime1', 'NomeTop1', 'NomeJng1', 'NomeMid1', 'NomeAdc1', 'NomeSup1'));
-inputTime2.addEventListener('change', () => escolher(inputTime2.value, 'imgLogo2', 'NomeTime2', 'NomeTop2', 'NomeJng2', 'NomeMid2', 'NomeAdc2', 'NomeSup2'));
+inputTime1.addEventListener('change', () => escolher(inputTime1.value, 'imgLogo1', 'NomeTime1', 'NomeTop1', 'NomeJng1', 'NomeMid1', 'NomeAdc1', 'NomeSup1','Top1', 'Jng1', 'Mid1', 'Adc1', 'Sup1'));
+inputTime2.addEventListener('change', () => escolher(inputTime2.value, 'imgLogo2', 'NomeTime2', 'NomeTop2', 'NomeJng2', 'NomeMid2', 'NomeAdc2', 'NomeSup2','Top2', 'Jng2', 'Mid2', 'Adc2', 'Sup2'));
 
-function escolher(nomeTime, idImg, idTxt, top, jng, mid, adc, sup){
+function escolher(nomeTime, idImg, idTxt, top, jng, mid, adc, sup, imgTop, imgJng, imgMid, imgAdc, imgSup){
     const img = window.document.getElementById(idImg);
     const txt = window.document.getElementById(idTxt);
     const topElement = window.document.getElementById(top);
@@ -66,6 +66,11 @@ function escolher(nomeTime, idImg, idTxt, top, jng, mid, adc, sup){
     const midElement = window.document.getElementById(mid);
     const adcElement = window.document.getElementById(adc);
     const supElement = window.document.getElementById(sup);
+    const topImagem = window.document.getElementById(imgTop);
+    const jngImagem = window.document.getElementById(imgJng);
+    const midImagem = window.document.getElementById(imgMid);
+    const adcImagem = window.document.getElementById(imgAdc);
+    const supImagem = window.document.getElementById(imgSup);
 
     const nomeExibicao = nomeTime.replace(/_/g, ' ');
 
@@ -82,10 +87,19 @@ function escolher(nomeTime, idImg, idTxt, top, jng, mid, adc, sup){
                         window[`Jogador ${index + 1}:`, jogador];
                         console.log(`Jogador ${index + 1}:`, jogador);
                         topElement.innerHTML = jogadores[0].nome;
+                        topImagem.src = `static/Imagens/Jogadores/${jogadores[0].nome}.webp`;
+
                         jngElement.innerHTML = jogadores[1].nome;
+                        jngImagem.src = `static/Imagens/Jogadores/${jogadores[1].nome}.webp`;
+
                         midElement.innerHTML = jogadores[2].nome;
+                        midImagem.src = `static/Imagens/Jogadores/${jogadores[2].nome}.webp`;
+
                         adcElement.innerHTML = jogadores[3].nome;
+                        adcImagem.src = `static/Imagens/Jogadores/${jogadores[3].nome}.webp`;
+
                         supElement.innerHTML = jogadores[4].nome;
+                        supImagem.src = `static/Imagens/Jogadores/${jogadores[4].nome}.webp`;
 
                     });
                 }
