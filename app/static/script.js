@@ -127,8 +127,6 @@ function trocarFundo(nomeTime, infoDivId){
     }
 }
 
-
-
-
+jogador_analisado = window.document.getElementsByClassName("NomesJogadores")
 
 
